@@ -1,0 +1,30 @@
+{
+  "name": "myfirstbraingames",
+  "version": "0.0.1",
+  "description": "hexlet project",
+  "main": "brain-games.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZHUT1/project-lvl1-s442.git"
+  },
+  "keywords": [
+    "first",
+    "noob",
+    "project"
+  ],
+  "author": "Nikolai Egorov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZHUT1/project-lvl1-s442/issues"
+  },
+  "homepage": "https://github.com/ZHUT1/project-lvl1-s442#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1"
+  }
+}
