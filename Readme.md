@@ -4,10 +4,13 @@
 
 [![Build Status](https://travis-ci.org/ZHUT1/project-lvl1-s442.svg?branch=master)](https://travis-ci.org/ZHUT1/project-lvl1-s442)
 
-## <center>INSTALLATION</center>
+## INSTALLATION
 
 [![asciicast](https://asciinema.org/a/fYEy5a5jzWmwYN53PaG9Tl5ea.svg)](https://asciinema.org/a/fYEy5a5jzWmwYN53PaG9Tl5ea)
 
-## <center>RUNNING EVEN GAME</center>
+## RUNNING EVEN GAME
 
 [![asciicast](https://asciinema.org/a/Qimnz3vQ8eyGFOTe1iIgqYxRa.svg)](https://asciinema.org/a/Qimnz3vQ8eyGFOTe1iIgqYxRa)
+
+## RUNNING CALC GAME
+[![asciicast](https://asciinema.org/a/JkxHTwD0eV0fkifnjuq3zRybe.svg)](https://asciinema.org/a/JkxHTwD0eV0fkifnjuq3zRybe)
