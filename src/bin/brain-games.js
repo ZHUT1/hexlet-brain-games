@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import { askname, question } from '..';
+import { askname, namequest } from '..';
 
-console.log(askname(question));
+console.log(askname(namequest));
