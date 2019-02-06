@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import { evengame, welcome } from '..';
+import { evengame } from '..';
 
-console.log(welcome);
 console.log(evengame());

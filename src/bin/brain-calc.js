@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import { braincalc, welcome } from '..';
+import { braincalc } from '..';
 
-console.log(welcome);
 console.log(braincalc());

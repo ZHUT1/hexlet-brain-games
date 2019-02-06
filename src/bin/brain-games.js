@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import { askname, namequest, welcome } from '..';
+import { bg } from '..';
 
-console.log(welcome);
-console.log(`Hello!, ${askname(namequest)}`);
+console.log(bg());
