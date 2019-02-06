@@ -33,3 +33,31 @@ export const evengame = () => {
   }
   return `Congratulations, ${name}!`;
 };
+export const braincalc = () => {
+  console.log('What is the result of the expression?');
+  const name = askname(namequest);
+  console.log(`Hello!, ${name}`);
+  console.log('\n');
+  for (let i = 0; i < 3; i += 1) {
+    let correct = null;
+    const x = Math.floor(Math.random() * 100);
+    const y = Math.floor(Math.random() * 100);
+    const oper = Math.floor(Math.random() * 2);
+    if (oper === 0) {
+      correct = x + y;
+      console.log(`Question: ${x} + ${y}`);
+    } else if (oper === 1) {
+      correct = x - y;
+      console.log(`Question: ${x} - ${y}`);
+    } else {
+      correct = x * y;
+      console.log(`Question: ${x} * ${y}`);
+    }
+    const answer = readlineSync.question('Your answer:');
+    if (Number(answer) !== correct) {
+      return (`${answer} is wrong answer ;(. Correct answer was ${correct}.
+      Let's try again, ${name}`);
+    } console.log('Correct!');
+  }
+  return `Congratulations, ${name}!`;
+};
