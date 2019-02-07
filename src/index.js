@@ -5,6 +5,6 @@ export const namequest = '\nMay i have your name?';
 export const ask = question => readlineSync.question(question);
 export const answerquest = ('Your answer:');
 export const bg = () => {
-  console.log(welcome);
-  return `Hello!, ${ask(namequest)}`;
+  console.log('\nWelcome to the Brain Games!');
+  return `Hello!, ${readlineSync('May i have your name?')}`;
 };

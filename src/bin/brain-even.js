@@ -2,4 +2,4 @@
 
 import evengame from '../games/even';
 
-console.log(evengame());
+evengame();
