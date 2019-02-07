@@ -2,4 +2,4 @@
 
 import { bg } from '..';
 
-console.log(bg());
+bg();
