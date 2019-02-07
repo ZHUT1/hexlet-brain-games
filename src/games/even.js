@@ -13,10 +13,10 @@ export default () => {
   for (let i = 0; i < questionnumber; i += 1) {
     const randomnumber = Math.floor(Math.random() * 100);
     console.log(`Question: ${randomnumber}`);
-    const correct = isEven(randomnumber) ? 'yes' : 'no';
+    const correctanswer = isEven(randomnumber) ? 'yes' : 'no';
     const answer = ask(answerquest);
-    if (answer !== correct) {
-      return (`"${answer}" is wrong answer ;(. Correct answer was "${correct}".
+    if (answer !== correctanswer) {
+      return (`"${answer}" is wrong answer ;(. Correct answer was "${correctanswer}".
       Let's try again, ${name}`);
     } console.log('Correct!');
   }
