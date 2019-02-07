@@ -1,20 +1,19 @@
-#!/usr/bin/env node
-
 import {
   welcome, ask, namequest, answerquest,
 } from '..';
 
+const isEven = num => num % 2 === 0;
 export default () => {
   console.log(welcome);
   console.log('Answer "yes" if number even otherwise answer "no".');
   const name = ask(namequest);
   console.log(`Hello!, ${name}`);
   console.log('\n');
-  const isEven = num => num % 2 === 0;
-  for (let questnum = 1; questnum < 4; questnum += 1) {
-    const randnum = Math.floor(Math.random() * 100);
-    console.log(`Question: ${randnum}`);
-    const correct = isEven(randnum) ? 'yes' : 'no';
+  const questionnumber = 3;
+  for (let i = 0; i < questionnumber; i += 1) {
+    const randomnumber = Math.floor(Math.random() * 100);
+    console.log(`Question: ${randomnumber}`);
+    const correct = isEven(randomnumber) ? 'yes' : 'no';
     const answer = ask(answerquest);
     if (answer !== correct) {
       return (`"${answer}" is wrong answer ;(. Correct answer was "${correct}".
