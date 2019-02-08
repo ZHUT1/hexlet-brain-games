@@ -3,23 +3,23 @@ import getRandom from '../utils';
 import { cons } from 'hexlet-pairs';
 
 const condition = 'What number is missing in the progression?';
+const progressionLength = 10;
 
 const generateQuestionAnswerPair = () => {
-  const lineLength = 10;
-  const pickNumber = getRandom(0, 10);
+  const choseProgressionElement = getRandom(0, 10);
   const firstNum = getRandom(0, 100);
-  const adder = getRandom(0, 100);
+  const progressionStep = getRandom(1, 100);
   let question = '';
   let correctAnswer;
   let num = firstNum;
-  for (let i = 0; i < lineLength; i += 1) {
-    if (pickNumber === i) {
+  for (let i = 0; i < progressionLength; i += 1) {
+    if (choseProgressionElement === i) {
       question += '.. ';
-      correctAnswer = String(num);
-      num += adder;
+      correctAnswer = String(num + progressionStep * i);
+      num += progressionStep;
     } else {
-      question += `${num} `;
-      num += adder;
+      question += `${num + progressionStep * i} `;
+      num += progressionStep;
     }
   }
   const data = cons(question, correctAnswer);
