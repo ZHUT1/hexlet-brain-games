@@ -28,3 +28,7 @@
 `brain-progression`
 
 [![asciicast](https://asciinema.org/a/JDW0c6hi2HSYdLYtOxPcm7H1b.svg)](https://asciinema.org/a/JDW0c6hi2HSYdLYtOxPcm7H1b)
+
+## RUNNING PRIME GAME
+
+[![asciicast](https://asciinema.org/a/P1KOsTf8FBpJmUAqnclGVl6tP.svg)](https://asciinema.org/a/P1KOsTf8FBpJmUAqnclGVl6tP)
