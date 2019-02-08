@@ -5,26 +5,26 @@ import { cons, getRandom, gameEngine } from '..';
 const condition = 'What is the result of the expression?';
 const questionAnswerPair = () => {
   let correctAnswer;
-  let expressAsk;
+  let question;
   let data = null;
   const firstnum = getRandom(1, 100);
   const secondnum = getRandom(1, 100);
-  const randomOpernum = getRandom(1, 4);
-  switch (randomOpernum) {
+  const randomOperator = getRandom(1, 4);
+  switch (randomOperator) {
     case 1:
       correctAnswer = String(firstnum + secondnum);
-      expressAsk = `Question: ${firstnum} + ${secondnum}`;
-      data = cons(expressAsk, correctAnswer);
+      question = `Question: ${firstnum} + ${secondnum}`;
+      data = cons(question, correctAnswer);
       return data;
     case 2:
       correctAnswer = String(firstnum - secondnum);
-      expressAsk = `Question: ${firstnum} - ${secondnum}`;
-      data = cons(expressAsk, correctAnswer);
+      question = `Question: ${firstnum} - ${secondnum}`;
+      data = cons(question, correctAnswer);
       return data;
     case 3:
       correctAnswer = String(firstnum * secondnum);
-      expressAsk = `Question: ${firstnum} * ${secondnum}`;
-      data = cons(expressAsk, correctAnswer);
+      question = `Question: ${firstnum} * ${secondnum}`;
+      data = cons(question, correctAnswer);
       return data;
     default:
       return data;
