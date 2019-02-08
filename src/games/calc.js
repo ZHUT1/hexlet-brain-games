@@ -1,4 +1,6 @@
-import { cons, getRandom, gameEngine } from '..';
+import gameEngine from '..';
+import { getRandom } from '../utils';
+import { cons } from 'hexlet-pairs';
 
 const condition = 'What is the result of the expression?';
 const generateQuestionAnswerPair = () => {

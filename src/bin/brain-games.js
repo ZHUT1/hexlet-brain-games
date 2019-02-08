@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { gameEngine } from '..';
+import gameEngine from '..';
 
 const welcoming = () => gameEngine('');
 welcoming();
