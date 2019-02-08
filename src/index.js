@@ -20,6 +20,9 @@ export const gameEngine = (condition, questionAnswerPair) => {
   gamecondition(condition);
   const name = askName();
   sayHello(name);
+  if (condition === '') {
+    return console.log();
+  }
   const questionnumber = 3;
   for (let i = 0; i < questionnumber; i += 1) {
     const pair = questionAnswerPair();

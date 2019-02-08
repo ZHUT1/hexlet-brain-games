@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
-import { bg } from '..';
+import { gameEngine } from '..';
 
-bg();
+const welcoming = () => gameEngine('');
+welcoming();
