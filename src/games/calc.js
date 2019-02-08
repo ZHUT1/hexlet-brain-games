@@ -1,5 +1,5 @@
 import gameEngine from '..';
-import { getRandom } from '../utils';
+import getRandom from '../utils';
 import { cons } from 'hexlet-pairs';
 
 const condition = 'What is the result of the expression?';
