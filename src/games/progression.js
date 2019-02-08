@@ -2,7 +2,7 @@ import { cons, gameEngine, getRandom } from '..';
 
 const condition = 'What number is missing in the progression?';
 
-const questionAnswerPair = () => {
+const generateQuestionAnswerPair = () => {
   const lineLength = 10;
   const pickNumber = getRandom(0, 10);
   const firstNum = getRandom(0, 100);
@@ -23,4 +23,4 @@ const questionAnswerPair = () => {
   const data = cons(question, correctAnswer);
   return data;
 };
-export default () => gameEngine(condition, questionAnswerPair);
+export default () => gameEngine(condition, generateQuestionAnswerPair);

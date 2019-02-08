@@ -1,9 +1,7 @@
-
 import { cons, getRandom, gameEngine } from '..';
 
-
 const condition = 'What is the result of the expression?';
-const questionAnswerPair = () => {
+const generateQuestionAnswerPair = () => {
   let correctAnswer;
   let question;
   let data = null;
@@ -31,4 +29,4 @@ const questionAnswerPair = () => {
   }
 };
 
-export default () => gameEngine(condition, questionAnswerPair);
+export default () => gameEngine(condition, generateQuestionAnswerPair);

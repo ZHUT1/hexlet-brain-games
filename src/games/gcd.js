@@ -13,7 +13,7 @@ const findGreatestDivisor = (firstnum, secondnum) => {
     }
   } return num1;
 };
-const questionAnswerPair = () => {
+const generateQuestionAnswerPair = () => {
   const firstnum = getRandom(1, 100);
   const secondnum = getRandom(1, 100);
   const question = `${firstnum}  ${secondnum}`;
@@ -21,4 +21,4 @@ const questionAnswerPair = () => {
   const data = cons(question, correctAnswer);
   return data;
 };
-export default () => gameEngine(condition, questionAnswerPair);
+export default () => gameEngine(condition, generateQuestionAnswerPair);
