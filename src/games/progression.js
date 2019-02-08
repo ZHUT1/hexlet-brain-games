@@ -4,7 +4,6 @@ import { cons } from 'hexlet-pairs';
 
 const condition = 'What number is missing in the progression?';
 const progressionLength = 10;
-let question = '';
 let correctAnswer;
 
 const generateQuestionAnswerPair = () => {
@@ -12,6 +11,7 @@ const generateQuestionAnswerPair = () => {
   const firstNum = getRandom(0, 100);
   const progressionStep = getRandom(1, 100);
   let num = firstNum;
+  let question = '';
   for (let i = 0; i < progressionLength; i += 1) {
     if (choseProgressionElement === i) {
       question += '.. ';
