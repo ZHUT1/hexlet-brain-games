@@ -14,3 +14,6 @@
 
 ## RUNNING CALC GAME
 [![asciicast](https://asciinema.org/a/JkxHTwD0eV0fkifnjuq3zRybe.svg)](https://asciinema.org/a/JkxHTwD0eV0fkifnjuq3zRybe)
+
+## RUNNUNG GCD GAME
+[![asciicast](https://asciinema.org/a/lahSFmitHibJG66nwPrgh5TTL.svg)](https://asciinema.org/a/lahSFmitHibJG66nwPrgh5TTL)
