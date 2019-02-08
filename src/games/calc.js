@@ -1,40 +1,34 @@
 
-import {
-  welcome, ask, namequest, answerquest,
-} from '..';
+import { cons, getRandom, gameEngine } from '..';
 
-export default () => {
-  console.log(welcome);
-  console.log('What is the result of the expression?');
-  const name = ask(namequest);
-  console.log(`Hello!, ${name}`);
-  console.log('\n');
-  for (let questnum = 1; questnum < 4; questnum += 1) {
-    let correct = null;
-    const firstnum = Math.floor(Math.random() * 10);
-    const secondnum = Math.floor(Math.random() * 10);
-    const randomopernum = Math.floor(Math.random() * (4 - 1)) + 1;
-    switch (randomopernum) {
-      case 1:
-        correct = firstnum + secondnum;
-        console.log(`Question: ${firstnum} + ${secondnum} `);
-        break;
-      case 2:
-        correct = firstnum - secondnum;
-        console.log(`Question: ${firstnum} - ${secondnum} `);
-        break;
-      case 3:
-        correct = firstnum * secondnum;
-        console.log(`Question: ${firstnum} * ${secondnum} `);
-        break;
-      default:
-        break;
-    }
-    const answer = ask(answerquest);
-    if (Number(answer) !== correct) {
-      return (`"${answer}" is wrong answer ;(. Correct answer was "${correct}".
-        Let's try again, ${name}`);
-    } console.log('Correct!');
+
+const condition = 'What is the result of the expression?';
+const questionAnswerPair = () => {
+  let correctAnswer;
+  let expressAsk;
+  let data = null;
+  const firstnum = getRandom(1, 100);
+  const secondnum = getRandom(1, 100);
+  const randomOpernum = getRandom(1, 4);
+  switch (randomOpernum) {
+    case 1:
+      correctAnswer = String(firstnum + secondnum);
+      expressAsk = `Question: ${firstnum} + ${secondnum}`;
+      data = cons(expressAsk, correctAnswer);
+      return data;
+    case 2:
+      correctAnswer = String(firstnum - secondnum);
+      expressAsk = `Question: ${firstnum} - ${secondnum}`;
+      data = cons(expressAsk, correctAnswer);
+      return data;
+    case 3:
+      correctAnswer = String(firstnum * secondnum);
+      expressAsk = `Question: ${firstnum} * ${secondnum}`;
+      data = cons(expressAsk, correctAnswer);
+      return data;
+    default:
+      return data;
   }
-  return `Congratulations, ${name}!`;
 };
+
+export default () => gameEngine(condition, questionAnswerPair);
