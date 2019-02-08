@@ -8,11 +8,8 @@ export default (condition, questionAnswerPair) => {
   const name = askName();
   console.log(`Hello, ${name}!`);
   if (condition === '') {
-    return console.log();
+    return;
   }
-  const wrongAnswer = (answer, correctAnswer) => console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}".
-  Let's try again, ${name}`);
-  const Congrats = congratName => console.log(`Congratulations, ${congratName}!`);
   const questionNumber = 3;
   for (let i = 0; i < questionNumber; i += 1) {
     const pair = questionAnswerPair();
@@ -21,7 +18,9 @@ export default (condition, questionAnswerPair) => {
     const correctAnswer = cdr(pair);
     const answer = readlineSync.question('Your answer: ');
     if (answer !== correctAnswer) {
-      return wrongAnswer(answer, correctAnswer);
+      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}".
+      Let's try again, ${name}`);
+      return;
     } console.log('Correct!');
-  } return Congrats(name);
+  } console.log(`Congratulations, ${name}!`);
 };
