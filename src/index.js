@@ -4,7 +4,7 @@ export const cons = (x, y) => f => f(x, y);
 export const car = pair => pair(x => x);
 export const cdr = pair => pair((x, y) => y);
 export const welcome = () => console.log('\nWelcome to the Brain Games!');
-export const gamecondition = condition => console.log(`${condition}`);
+export const gameCondition = condition => console.log(`${condition}`);
 export const sayHello = name => console.log(`Hello, ${name}!`);
 
 export const bg = () => {
@@ -17,14 +17,14 @@ export const getRandom = (min, max) => Math.floor(Math.random() * (max - min)) +
 export const gameEngine = (condition, questionAnswerPair) => {
   const askName = () => readlineSync.question('\nMay i have your name?');
   welcome();
-  gamecondition(condition);
+  gameCondition(condition);
   const name = askName();
   sayHello(name);
   if (condition === '') {
     return console.log();
   }
-  const questionnumber = 3;
-  for (let i = 0; i < questionnumber; i += 1) {
+  const questionNumber = 3;
+  for (let i = 0; i < questionNumber; i += 1) {
     const pair = questionAnswerPair();
     const question = car(pair);
     console.log(`Question: ${question}`);
