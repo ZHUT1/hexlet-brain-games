@@ -6,19 +6,16 @@ const condition = 'What number is missing in the progression?';
 const progressionLength = 10;
 
 const generateQuestionAnswerPair = () => {
-  const getHiddenElementPosition = getRandom(0, 10);
-  const getFirstNum = getRandom(0, 100);
-  const getProgressionStep = getRandom(1, 100);
-  const currentNumber = getFirstNum;
+  const HiddenElementPosition = getRandom(0, progressionLength);
+  const FirstNum = getRandom(0, 100);
+  const progressionStep = getRandom(1, 100);
   let question = '';
-  const progressionStep = getProgressionStep;
-  const HiddenElementPosition = getHiddenElementPosition;
-  const correctAnswer = String(currentNumber + (progressionStep * HiddenElementPosition));
+  const correctAnswer = String(FirstNum + (progressionStep * HiddenElementPosition));
   for (let i = 0; i < progressionLength; i += 1) {
     if (HiddenElementPosition === i) {
       question += '.. ';
     } else {
-      question += `${currentNumber + progressionStep * i} `;
+      question += `${FirstNum + progressionStep * i} `;
     }
   }
   const data = cons(question.trim(), correctAnswer);
