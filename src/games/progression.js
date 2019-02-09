@@ -4,25 +4,24 @@ import { cons } from 'hexlet-pairs';
 
 const condition = 'What number is missing in the progression?';
 const progressionLength = 10;
-let correctAnswer;
 
 const generateQuestionAnswerPair = () => {
-  const choseProgressionElement = getRandom(0, 10);
-  const firstNum = getRandom(0, 100);
-  const progressionStep = getRandom(1, 100);
-  let num = firstNum;
+  const getHiddenElementPosition = getRandom(0, 10);
+  const getFirstNum = getRandom(0, 100);
+  const getProgressionStep = getRandom(1, 100);
+  const currentNumber = getFirstNum;
   let question = '';
+  const progressionStep = getProgressionStep;
+  const HiddenElementPosition = getHiddenElementPosition;
+  const correctAnswer = String(currentNumber + (progressionStep * HiddenElementPosition));
   for (let i = 0; i < progressionLength; i += 1) {
-    if (choseProgressionElement === i) {
+    if (HiddenElementPosition === i) {
       question += '.. ';
-      correctAnswer = String(num + progressionStep * i);
-      num += progressionStep;
     } else {
-      question += `${num + progressionStep * i} `;
-      num += progressionStep;
+      question += `${currentNumber + progressionStep * i} `;
     }
   }
-  const data = cons(question, correctAnswer);
+  const data = cons(question.trim(), correctAnswer);
   return data;
 };
 export default () => gameEngine(condition, generateQuestionAnswerPair);
